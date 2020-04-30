@@ -1,4 +1,4 @@
-## mithril 简单看源码
+## 简单看MithrilJS源码
 ---
 
 ### 一个简单的测试代码
@@ -33,6 +33,7 @@
 这个m()回调一个hyperscript.appley()函数,arguments实参数组,即调用hyperscript.appley(this,["p","test"])
 
 #### 断点调试2
+先看构造函数
 
 	function hyperscript(seletor){
 		//这里是判断seletor定义类型，必须是string或函数
@@ -49,7 +50,7 @@
 		return vnode
 	}
 
-进入hyperscriptVnode  
+进入hyperscriptVnode 
 
 	var hyperscriptVnode = function() {
 		var attrs1 = arguments[this], start = this + 1, children1
